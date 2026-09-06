@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wilbert Devoss Kyenil - Portfolio</title>
+    <title>Portfolio - Wilbert Devoss Kyenil</title>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -21,6 +21,10 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
@@ -44,20 +48,9 @@
 
         .logo {
             font-weight: 800;
-            font-size: 1.25rem;
+            font-size: 1.5rem;
             letter-spacing: -0.5px;
             color: var(--primary-dark);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .logo-badge {
-            background-color: var(--primary-dark);
-            color: white;
-            padding: 4px 10px;
-            border-radius: 4px;
-            font-size: 0.85rem;
         }
 
         nav a {
@@ -75,7 +68,7 @@
 
         .hero {
             max-width: 1200px;
-            margin: 80px auto 40px;
+            margin: 60px auto 40px;
             padding: 0 24px;
             display: grid;
             grid-template-columns: 1.2fr 0.8fr;
@@ -84,7 +77,7 @@
         }
 
         .hero-content h1 {
-            font-size: 3.5rem;
+            font-size: 3.25rem;
             font-weight: 800;
             line-height: 1.1;
             color: var(--primary-dark);
@@ -178,10 +171,7 @@
         }
 
         .section-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
-            margin-bottom: 40px;
+            margin-bottom: 32px;
         }
 
         .section-header h2 {
@@ -191,9 +181,41 @@
             letter-spacing: -1px;
         }
 
-        .section-header p {
+        .about-card {
+            background-color: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 40px;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+        }
+
+        .about-text {
+            font-size: 1.05rem;
+            color: var(--text-main);
+            line-height: 1.8;
+        }
+
+        .about-details {
+            border-left: 1px solid var(--border-color);
+            padding-left: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .detail-item h4 {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
             color: var(--text-muted);
-            max-width: 450px;
+            margin-bottom: 4px;
+        }
+
+        .detail-item p {
+            font-weight: 600;
+            color: var(--primary-dark);
             font-size: 0.95rem;
         }
 
@@ -272,11 +294,17 @@
                 grid-template-columns: 1fr;
                 margin-top: 40px;
             }
+            .about-card {
+                grid-template-columns: 1fr;
+            }
+            .about-details {
+                border-left: none;
+                border-top: 1px solid var(--border-color);
+                padding-left: 0;
+                padding-top: 24px;
+            }
             header {
                 padding: 20px;
-            }
-            nav {
-                display: none;
             }
         }
     </style>
@@ -285,12 +313,11 @@
 
     <header>
         <div class="logo">
-            <span class="logo-badge">WDK</span> Wilbert Devoss Kyenil
+            Portfolio
         </div>
         <nav>
             <a href="#about">About</a>
             <a href="#projects">Projects</a>
-            <a href="Wilbert_Devoss_Kyenil_CV.pdf" download="Wilbert_Devoss_Kyenil_CV.pdf" class="btn btn-primary" style="padding: 8px 16px; margin-left: 20px;">Download CV ↘</a>
         </nav>
     </header>
 
@@ -299,33 +326,57 @@
         <div class="hero">
             <div class="hero-content">
                 <h1>ARTIFICIAL INTELLIGENCE & SOFTWARE ENGINEER</h1>
-                <p>Computer Science student at Binus University blending algorithmic problem-solving with intuitive user-centric UI/UX design and scalable backend development.</p>
+                <p>Wilbert Devoss Kyenil — Computer Science student at Binus University specializing in AI systems, backend architecture, and intuitive design.</p>
                 <div class="cta-group">
                     <a href="#projects" class="btn btn-primary">Explore Projects ↗</a>
                     <a href="Wilbert_Devoss_Kyenil_CV.pdf" download="Wilbert_Devoss_Kyenil_CV.pdf" class="btn btn-outline">Download CV ↘</a>
                 </div>
             </div>
             <div class="hero-card">
-                <h3>Core Expertise</h3>
-                <p>Specialized in building robust architectures under the hood and clean interfaces on the surface.</p>
+                <h3>Core Stack</h3>
+                <p>Focusing on algorithmic strength, backend scalability, and high-usability user interfaces.</p>
                 <div class="skills-tags">
                     <span class="tag">C / C++</span>
                     <span class="tag">Python</span>
                     <span class="tag">C#</span>
                     <span class="tag">Node.js</span>
                     <span class="tag">React.js</span>
-                    <span class="tag">UI/UX Design</span>
+                    <span class="tag">Docker</span>
+                    <span class="tag">Figma</span>
                 </div>
             </div>
         </div>
 
+        <!-- About Section -->
+        <section id="about">
+            <div class="section-header">
+                <h2>About Me</h2>
+            </div>
+            <div class="about-card">
+                <div class="about-text">
+                    <p>Computer Science student majoring in Artificial Intelligence at Binus University Alam Sutera, with a strong foundation in both user-centric UI/UX design and robust backend development. Proficient in C, C++, and Python, with practical experience in C#. I blend algorithmic problem-solving with interface architecture, ensuring that the software I engineer is not only smart and scalable under the hood, but genuinely intuitive to use on the surface. My background taught me how to break down complex systemic logic, while my design focus keeps the human experience at the center of every line of code.</p>
+                </div>
+                <div class="about-details">
+                    <div class="detail-item">
+                        <h4>Education</h4>
+                        <p>BINUS University (2022–2027)<br>B.C.S. in Artificial Intelligence</p>
+                    </div>
+                    <div class="detail-item">
+                        <h4>Languages</h4>
+                        <p>C, C++, Python, C#, Java, TypeScript/JS, PHP, Golang</p>
+                    </div>
+                    <div class="detail-item">
+                        <h4>Achievements</h4>
+                        <p>5th Rank Regency Informatics Olympiad (OSN-K)<br>Runner Up AMSA Academic Competition</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Projects Section -->
         <section id="projects">
             <div class="section-header">
-                <div>
-                    <h2>Featured Work</h2>
-                    <p>A selection of full-stack prototypes, backend systems, and web applications developed with modern technologies.</p>
-                </div>
+                <h2>Featured Work</h2>
             </div>
 
             <div class="projects-grid">
@@ -363,7 +414,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2026 Wilbert Devoss Kyenil. All rights reserved. Built with professional layout standards.</p>
+        <p>&copy; 2026 Wilbert Devoss Kyenil. All rights reserved.</p>
     </footer>
 
 </body>
